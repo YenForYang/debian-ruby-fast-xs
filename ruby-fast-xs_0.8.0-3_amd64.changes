@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Mon, 02 Jul 2012 01:02:38 -0300
+Source: ruby-fast-xs
+Binary: ruby-fast-xs
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: amd64
+Version: 0.8.0-3
+Distribution: unstable
+Urgency: low
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Changed-By: Antonio Terceiro <terceiro@debian.org>
+Description:
+ ruby-fast-xs - ruby extension for escaping text
+Closes: 679847
+Changes:
+ ruby-fast-xs (0.8.0-3) unstable; urgency=low
+ .
+   * Team upload.
+   * Breaks: ruby-hpricot << 0.8.6-3~ since this package now provides a file
+     that used to be provided by that package (Closes: #679847).
+Checksums-Sha1:
+ a8290a9771fe79ae5d599d4e3f37f36d10192319 10924 ruby-fast-xs-dbgsym_0.8.0-3_amd64.deb
+ 65695029334081f2c8d218a0f1b4c98e2e5fdbd3 9313 ruby-fast-xs_0.8.0-3_amd64.buildinfo
+ 08d431487bdff3699d0361a266bbea21baae73e4 8432 ruby-fast-xs_0.8.0-3_amd64.deb
+Checksums-Sha256:
+ 22809ac911dd5661a653f6bfa2eeef61129b7c4ec9a51f6dd27c864b78f96acd 10924 ruby-fast-xs-dbgsym_0.8.0-3_amd64.deb
+ 7d0e1684261951d10a9031ec17a94d9c4d49cd65216f6693872846c9a4b4986f 9313 ruby-fast-xs_0.8.0-3_amd64.buildinfo
+ 5250c309d3a4c1d0f9aed91c96f74f9de3ecee014c2c4d470ab1817b3dfde51c 8432 ruby-fast-xs_0.8.0-3_amd64.deb
+Files:
+ dba1cc56245f2ae0e9aba1028f39314e 10924 debug optional ruby-fast-xs-dbgsym_0.8.0-3_amd64.deb
+ caedb4c430731000b0c8d27f5e80c457 9313 ruby optional ruby-fast-xs_0.8.0-3_amd64.buildinfo
+ c38dabba08e8c2cac1096341b6f8fcd8 8432 ruby optional ruby-fast-xs_0.8.0-3_amd64.deb

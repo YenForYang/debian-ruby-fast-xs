@@ -1,0 +1,21 @@
+Source: ruby-fast-xs
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Tollef Fog Heen <tfheen@debian.org>
+Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.2.13~), ruby-rack
+Standards-Version: 3.9.2
+#Vcs-Git: git://git.debian.org/pkg-ruby-extras/ruby-fast-xs.git
+#Vcs-Browser: http://git.debian.org/?p=pkg-ruby-extras/ruby-fast-xs.git;a=summary
+Homepage: http://fast-xs.rubyforge.org/
+XS-Ruby-Versions: all
+
+Package: ruby-fast-xs
+Architecture: any
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ruby | ruby-interpreter
+# hoe (>= 2.8.0, development)
+Breaks: ruby-hpricot (<< 0.8.6-3~)
+Description: ruby extension for escaping text
+ fast_xs escapes text so it can be embedded more directly into XML and
+ HTML without having to deal with character set issues.

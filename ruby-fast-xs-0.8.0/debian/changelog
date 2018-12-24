@@ -1,0 +1,21 @@
+ruby-fast-xs (0.8.0-3) unstable; urgency=low
+
+  * Team upload.
+  * Breaks: ruby-hpricot << 0.8.6-3~ since this package now provides a file
+    that used to be provided by that package (Closes: #679847).
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 02 Jul 2012 01:02:38 -0300
+
+ruby-fast-xs (0.8.0-2) unstable; urgency=low
+
+  * Add full name to uploaders
+  * Drop DM-Upload-Allowed; no DMs in uploaders.
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Fri, 29 Jun 2012 08:50:39 +0200
+
+ruby-fast-xs (0.8.0-1) unstable; urgency=low
+
+  * Initial release
+  * Fix up copyright file.
+
+ -- Tollef Fog Heen <tfheen@debian.org>  Wed, 20 Jun 2012 21:59:36 +0200

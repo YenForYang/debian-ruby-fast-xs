@@ -1,0 +1,13 @@
+Package: ruby-fast-xs-dbgsym
+Source: ruby-fast-xs
+Version: 0.8.0-3
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Installed-Size: 31
+Depends: ruby-fast-xs (= 0.8.0-3)
+Section: debug
+Priority: optional
+Description: debug symbols for ruby-fast-xs
+Build-Ids: 59415423b2f02d3e915ac5b2707581e8e6bb1593 ce6378caef4563284c04e55644006e3313ea0181
+Ruby-Versions: ruby2.5

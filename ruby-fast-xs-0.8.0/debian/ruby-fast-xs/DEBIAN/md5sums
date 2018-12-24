@@ -1,0 +1,6 @@
+4d03f6fda4df03e754ee46669256ae43  usr/lib/ruby/vendor_ruby/fast_xs_monkey_patcher.rb
+a7b55c7ed6dffa2dbc2adce3e3d3a5cf  usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/fast_xs.so
+dfc696d55cd215e50d4a11de30a9df51  usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/fast_xs_extra.so
+36ea225c528a24834175b06e9c48fc67  usr/share/doc/ruby-fast-xs/changelog.Debian.gz
+ce5c09749b25488552a2d3dcdb95cc12  usr/share/doc/ruby-fast-xs/copyright
+9fc8e4116c6f66dac92f091b6e12bc03  usr/share/rubygems-integration/2.5.0/specifications/fast_xs-0.8.0.gemspec

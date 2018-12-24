@@ -1,0 +1,199 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck,nodoc
+dpkg-buildpackage: info: source package ruby-fast-xs
+dpkg-buildpackage: info: source version 0.8.0-3
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Antonio Terceiro <terceiro@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --buildsystem=ruby --with ruby
+dh: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_auto_clean -O--buildsystem=ruby
+dh_auto_clean: Compatibility levels before 9 are deprecated (level 7 in use)
+	dh_ruby --clean
+   dh_ruby --clean
+   dh_clean -O--buildsystem=ruby
+dh_clean: Compatibility levels before 9 are deprecated (level 7 in use)
+FAKEROOTKEY=1316276100 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+ debian/rules build
+dh build --buildsystem=ruby --with ruby
+dh: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_update_autotools_config -O--buildsystem=ruby
+   dh_auto_configure -O--buildsystem=ruby
+dh_auto_configure: Compatibility levels before 9 are deprecated (level 7 in use)
+	dh_ruby --configure
+   dh_auto_build -O--buildsystem=ruby
+dh_auto_build: Compatibility levels before 9 are deprecated (level 7 in use)
+	dh_ruby --build
+   dh_ruby --build
+   dh_auto_test -O--buildsystem=ruby
+dh_auto_test: Compatibility levels before 9 are deprecated (level 7 in use)
+ fakeroot debian/rules binary
+dh binary --buildsystem=ruby --with ruby
+dh: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_auto_test -O--buildsystem=ruby
+dh_auto_test: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_testroot -O--buildsystem=ruby
+   dh_prep -O--buildsystem=ruby
+   dh_installdirs -O--buildsystem=ruby
+dh_installdirs: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_auto_install -O--buildsystem=ruby
+dh_auto_install: Compatibility levels before 9 are deprecated (level 7 in use)
+	dh_ruby --install /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/debian/ruby-fast-xs
+   dh_ruby --install
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Install files                                                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+install -d /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/debian/ruby-fast-xs/usr/lib/ruby/vendor_ruby
+install -D -m644 /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/lib/fast_xs_monkey_patcher.rb /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/debian/ruby-fast-xs/usr/lib/ruby/vendor_ruby/fast_xs_monkey_patcher.rb
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Build native extensions for ruby2.5                                          │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+/usr/bin/ruby2.5 /usr/lib/ruby/vendor_ruby/gem2deb/extension_builder.rb /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0 debian/ruby-fast-xs
+current directory: /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs
+/usr/bin/ruby2.5 -r ./siteconf20181224-10715-loj8xd.rb extconf.rb
+checking for assert.h... yes
+creating Makefile
+current directory: /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs
+make V=1 "DESTDIR=" clean
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs'
+rm -f 
+rm -f fast_xs.so  *.o  *.bak mkmf.log .*.time
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs'
+current directory: /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs
+make V=1 "DESTDIR="
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs'
+icc -I. -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -DHAVE_ASSERT_H -Wdate-time -D_FORTIFY_SOURCE=2   -fPIC -g -O2 -fdebug-prefix-map=/dev/shm/mosh/ruby2.5/ruby2.5=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -fPIC  -o fast_xs.o -c fast_xs.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/mosh/ruby2.5/ruby2.5=.'
+Front end time                       0.22 (CPU)       0.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.25 (CPU)       0.00 (elapsed)
+rm -f fast_xs.so
+icc -shared -o fast_xs.so fast_xs.o -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -rdynamic -Wl,-export-dynamic -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax    -lruby-2.5  -lpthread -lgmp -ldl -lcrypt -lm   -lc
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs'
+current directory: /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs
+make V=1 "DESTDIR=" install
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs'
+/bin/mkdir -p . ./.gem.20181224-10715-1btk0gg
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 fast_xs.so ./.gem.20181224-10715-1btk0gg
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs'
+rm -f /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/debian/ruby-fast-xs/usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/mkmf.log
+current directory: /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra
+/usr/bin/ruby2.5 -r ./siteconf20181224-10715-7m7p0r.rb extconf.rb
+checking for assert.h... yes
+checking for gcc.h in ./../fast_xs... yes
+creating Makefile
+current directory: /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra
+make V=1 "DESTDIR=" clean
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra'
+rm -f 
+rm -f fast_xs_extra.so  *.o  *.bak mkmf.log .*.time
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra'
+current directory: /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra
+make V=1 "DESTDIR="
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra'
+icc -I. -I/usr/include/x86_64-linux-gnu/ruby-2.5.0 -I/usr/include/ruby-2.5.0/ruby/backward -I/usr/include/ruby-2.5.0 -I. -I./../fast_xs -DHAVE_ASSERT_H -Wdate-time -D_FORTIFY_SOURCE=2   -fPIC -g -O2 -fdebug-prefix-map=/dev/shm/mosh/ruby2.5/ruby2.5=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -fPIC  -o fast_xs_extra.o -c fast_xs_extra.c
+icc: command line warning #10006: ignoring unknown option '-fdebug-prefix-map=/dev/shm/mosh/ruby2.5/ruby2.5=.'
+Front end time                       0.22 (CPU)       1.00 (elapsed)
+Back end time                        0.03 (CPU)       0.00 (elapsed)
+Total compilation time               0.25 (CPU)       1.00 (elapsed)
+rm -f fast_xs_extra.so
+icc -shared -o fast_xs_extra.so fast_xs_extra.o -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -rdynamic -Wl,-export-dynamic -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax    -lruby-2.5  -lpthread -lgmp -ldl -lcrypt -lm   -lc
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra'
+current directory: /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra
+make V=1 "DESTDIR=" install
+make[1]: Entering directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra'
+/bin/mkdir -p . ./.gem.20181224-10715-4oqc8d
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 fast_xs_extra.so ./.gem.20181224-10715-4oqc8d
+make[1]: Leaving directory '/dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/ext/fast_xs_extra'
+rm -f /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/debian/ruby-fast-xs/usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/mkmf.log
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Install Rubygems integration metadata                                        │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+generating gemspec at /dev/shm/systemd/test/deps/test/lvm2/tmp/corosync/tmp/libqb/libsubunit-dev/others/ruby-fast-xs/ruby-fast-xs-0.8.0/debian/ruby-fast-xs/usr/share/rubygems-integration/2.5.0/specifications/fast_xs-0.8.0.gemspec
+DEB_BUILD_OPTIONS includes nocheck, skipping all checks (test suite, rubygems usage etc).
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ dh_ruby --install finished                                                   │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+   dh_install -O--buildsystem=ruby
+dh_install: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_installdocs -O--buildsystem=ruby
+dh_installdocs: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_ruby_fixdocs -O--buildsystem=ruby
+   dh_installchangelogs -O--buildsystem=ruby
+dh_installchangelogs: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_installexamples -O--buildsystem=ruby
+dh_installexamples: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_installman -O--buildsystem=ruby
+dh_installman: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_installcatalogs -O--buildsystem=ruby
+   dh_installcron -O--buildsystem=ruby
+   dh_installdebconf -O--buildsystem=ruby
+   dh_installemacsen -O--buildsystem=ruby
+   dh_installifupdown -O--buildsystem=ruby
+   dh_installinfo -O--buildsystem=ruby
+dh_installinfo: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_installinit -O--buildsystem=ruby
+dh_installinit: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_installmenu -O--buildsystem=ruby
+   dh_installmime -O--buildsystem=ruby
+   dh_installmodules -O--buildsystem=ruby
+   dh_installlogcheck -O--buildsystem=ruby
+   dh_installlogrotate -O--buildsystem=ruby
+   dh_installpam -O--buildsystem=ruby
+   dh_installppp -O--buildsystem=ruby
+   dh_installudev -O--buildsystem=ruby
+   dh_installgsettings -O--buildsystem=ruby
+   dh_bugfiles -O--buildsystem=ruby
+   dh_ucf -O--buildsystem=ruby
+   dh_lintian -O--buildsystem=ruby
+   dh_gconf -O--buildsystem=ruby
+dh_gconf: Please migrate to dh_installgsettings; gconf + dh_gconf is scheduled for removal.
+   dh_icons -O--buildsystem=ruby
+   dh_perl -O--buildsystem=ruby
+   dh_usrlocal -O--buildsystem=ruby
+   dh_link -O--buildsystem=ruby
+   dh_installwm -O--buildsystem=ruby
+   dh_installxfonts -O--buildsystem=ruby
+   dh_strip_nondeterminism -O--buildsystem=ruby
+   dh_compress -X.rb -O--buildsystem=ruby
+dh_compress: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_fixperms -O--buildsystem=ruby
+   dh_missing -O--buildsystem=ruby
+dh_missing: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_strip -O--buildsystem=ruby
+dh_strip: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_makeshlibs -O--buildsystem=ruby
+dh_makeshlibs: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_shlibdeps -O--buildsystem=ruby
+dh_shlibdeps: Compatibility levels before 9 are deprecated (level 7 in use)
+dpkg-shlibdeps: warning: deprecated use of LD_LIBRARY_PATH with private library directory which interferes with cross-building, please use -l option instead
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/ruby-fast-xs/usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/fast_xs.so debian/ruby-fast-xs/usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/fast_xs_extra.so were not linked against libpthread.so.0 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/ruby-fast-xs/usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/fast_xs.so debian/ruby-fast-xs/usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/fast_xs_extra.so were not linked against libgcc_s.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/ruby-fast-xs/usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/fast_xs.so debian/ruby-fast-xs/usr/lib/x86_64-linux-gnu/ruby/vendor_ruby/2.5.0/fast_xs_extra.so were not linked against libdl.so.2 (they use none of the library's symbols)
+   dh_ruby_fixdepends -O--buildsystem=ruby
+   dh_installdeb -O--buildsystem=ruby
+dh_installdeb: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_gencontrol -O--buildsystem=ruby
+   dh_md5sums -O--buildsystem=ruby
+   dh_builddeb -O--buildsystem=ruby
+dpkg-deb: building package 'ruby-fast-xs' in '../ruby-fast-xs_0.8.0-3_amd64.deb'.
+dpkg-deb: building package 'ruby-fast-xs-dbgsym' in '../ruby-fast-xs-dbgsym_0.8.0-3_amd64.deb'.
+FAKEROOTKEY=895919021 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../ruby-fast-xs_0.8.0-3_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian ruby-fast-xs_0.8.0-3_amd64.changes ...
+Finished running lintian.
